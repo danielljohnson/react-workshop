@@ -1,6 +1,6 @@
 # React Workshop
 
-Setup
+### Setup
 
 - Install node modules `npm install`
 - Install bower components `bower install`
