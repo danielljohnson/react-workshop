@@ -6,6 +6,10 @@ var App = React.createClass({
         return (
             <section>
                 <Navbar title="React Workshop" />
+
+                <div className="container">
+                    <p>Hello World!</p>
+                </div>
             </section>
         );
     }
