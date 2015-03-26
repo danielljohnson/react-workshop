@@ -1,0 +1,11 @@
+{
+  "name": "task-manager-react",
+  "version": "0.0.1",
+  "devDependencies": {
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-babel": "^4.0.0",
+    "gulp-browserify": "^0.5.1"
+  },
+  "dependencies": {}
+}

@@ -1,5 +1,14 @@
-// components
 import Navbar from './Navbar.react';
+import ShoppingList from './ShoppingList.react';
+
+// mock data
+var items = [{
+    name: 'broccoli'
+},{
+    name: 'pasta'
+},{
+    name: 'scallops'
+}];
 
 var App = React.createClass({
     render: function() {
@@ -8,7 +17,7 @@ var App = React.createClass({
                 <Navbar title="React Workshop" />
 
                 <div className="container">
-                    <p>Hello World!</p>
+                    <ShoppingList items={items} />
                 </div>
             </section>
         );
