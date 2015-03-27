@@ -57,32 +57,40 @@
 //     }
 // });
 
+var recipes = [{
+    title: 'Sugar Cookies!'
+},{
+    title: 'Brownies!'
+}];
+
 var Recipe = React.createClass({
     render: function() {
         return (
-            <div>
-              <p>{this.props.title}</p>
-              <p>{this.props.mainIngredient}</p>
-            </div>
+            <p>{this.props.recipe.title}</p>
         );
     }
 });
 
 var RecipeList = React.createClass({
     render: function() {
+        var recipes = this.props.recipes.map(function(item, i) {
+            return (
+                <Recipe recipe={item} key={i}/>
+            );
+        });
+
         return (
             <section>
-                <h3>There are {this.props.numRecipes} recipes.</h3>
+                <h3>There are {this.props.recipes.length} recipes.</h3>
 
-                <Recipe title="Sugar Cookies" mainIngredient="Sugar" />
-                <Recipe title="Brownies" mainIngredient="Chocolate"/>
+                {recipes}
             </section>
         );
     }
 });
 
 React.render(
-    <RecipeList numRecipes="90" />,
+    <RecipeList recipes={recipes} />,
     document.body
 );
 
