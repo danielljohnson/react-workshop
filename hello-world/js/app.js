@@ -1,11 +1,11 @@
 // Hello world
-React.render(
-    <div>
-        <h2>Hello, world!</h2>
-        <p>{1+1}</p>
-    </div>,
-    document.body
-);
+// React.render(
+//     <div>
+//         <h2>Hello, world!</h2>
+//         <p>{1+1}</p>
+//     </div>,
+//     document.body
+// );
 
 // First component
 // var JobList = React.createClass({
@@ -57,10 +57,34 @@ React.render(
 //     }
 // });
 
-// React.render(
-//     <JobList numJobs="10" />,
-//     document.body
-// );
+var Recipe = React.createClass({
+    render: function() {
+        return (
+            <div>
+              <p>{this.props.title}</p>
+              <p>{this.props.mainIngredient}</p>
+            </div>
+        );
+    }
+});
+
+var RecipeList = React.createClass({
+    render: function() {
+        return (
+            <section>
+                <h3>There are {this.props.numRecipes} recipes.</h3>
+
+                <Recipe title="Sugar Cookies" mainIngredient="Sugar" />
+                <Recipe title="Brownies" mainIngredient="Chocolate"/>
+            </section>
+        );
+    }
+});
+
+React.render(
+    <RecipeList numRecipes="90" />,
+    document.body
+);
 
 // Passing external data down through components
 // var jobs = [{
