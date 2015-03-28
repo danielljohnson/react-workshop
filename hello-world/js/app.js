@@ -64,9 +64,15 @@ var recipes = [{
 }];
 
 var Recipe = React.createClass({
+    handleClick: function(e) {
+        e.preventDefault();
+
+        alert(this.props.recipe.title);
+    },
+
     render: function() {
         return (
-            <p>{this.props.recipe.title}</p>
+            <p><a href="#" onClick={this.handleClick}>{this.props.recipe.title}</a></p>
         );
     }
 });
