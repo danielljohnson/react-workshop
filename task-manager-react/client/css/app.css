@@ -1,0 +1,13 @@
+body {
+    padding-top: 50px;
+}
+
+.categoryForm,
+.taskForm,
+.taskList {
+    margin: 20px 0 0;
+}
+
+.taskList li[data-status="2"] {
+    text-decoration: line-through !important;
+}

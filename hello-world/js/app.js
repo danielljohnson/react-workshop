@@ -1,11 +1,11 @@
 // Hello world
-React.render(
-    <div>
-        <h2>Hello, world!</h2>
-        <p>{1+1}</p>
-    </div>,
-    document.body
-);
+// React.render(
+//     <div>
+//         <h2>Hello, world!</h2>
+//         <p>{1+1}</p>
+//     </div>,
+//     document.body
+// );
 
 // First component
 // var JobList = React.createClass({
@@ -31,7 +31,7 @@ React.render(
 // });
 
 // React.render(
-//     <JobList numJobs="10" />,
+//     <JobList numJobs="100" />,
 //     document.body
 // );
 
@@ -47,7 +47,7 @@ React.render(
 // var JobList = React.createClass({
 //     render: function() {
 //         return (
-//             <section>
+//             <section className="red">
 //                 <h3>There are {this.props.numJobs} jobs.</h3>
 
 //                 <Job title="JS Developer" />
@@ -96,50 +96,50 @@ React.render(
 // });
 
 // React.render(
-//     <JobList jobs={jobs} />,
+//     <JobList   />,
 //     document.body
 // );
 
 // Events
-// var jobs = [{
-//     title: 'JS Developer'
-// },{
-//     title: 'Rails Developer'
-// }];
+var jobs = [{
+    title: 'JS Developer'
+},{
+    title: 'Rails Developer'
+}];
 
-// var Job = React.createClass({
-//     handleClick: function(e) {
-//         e.preventDefault();
+var Job = React.createClass({
+    handleClick: function(e) {
+        e.preventDefault();
 
-//         console.log(this.props.job.title);
-//     },
+        console.log(this.props.job.title);
+    },
 
-//     render: function() {
-//         return (
-//             <p><a href="#" onClick={this.handleClick}>{this.props.job.title}</a></p>
-//         );
-//     }
-// });
+    render: function() {
+        return (
+            <p><a href="#" onClick={this.handleClick}>{this.props.job.title}</a></p>
+        );
+    }
+});
 
-// var JobList = React.createClass({
-//     render: function() {
-//         var jobs = this.props.jobs.map(function(item, i) {
-//             return (
-//                 <Job job={item} key={i}/>
-//             );
-//         });
+var JobList = React.createClass({
+    render: function() {
+        var jobs = this.props.jobs.map(function(item, i) {
+            return (
+                <Job job={item} key={i}/>
+            );
+        });
 
-//         return (
-//             <section>
-//                 <h3>There are {this.props.jobs.length} jobs.</h3>
+        return (
+            <section>
+                <h3>There are {this.props.jobs.length} jobs.</h3>
 
-//                 {jobs}
-//             </section>
-//         );
-//     }
-// });
+                {jobs}
+            </section>
+        );
+    }
+});
 
-// React.render(
-//     <JobList jobs={jobs} />,
-//     document.body
-// );
+React.render(
+    <JobList jobs={jobs} />,
+    document.body
+);
