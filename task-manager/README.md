@@ -1,5 +1,5 @@
-task-manager-react
-==================
+task-manager
+============
 
 A task manager demo using React and Backbone.
 
