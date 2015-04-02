@@ -1,8 +1,14 @@
 var TaskList = React.createClass({
     render: function() {
+        var categoryList = this.props.categories.map((category, i) => {
+            return (
+                <li key={i}>{category.get('name')}</li>
+            );
+        });
+
         return (
             <ul className="taskList">
-                <li><a href="#">Task 1</a></li>
+                {categoryList}
             </ul>
         );
     }
