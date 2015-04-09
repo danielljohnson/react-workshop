@@ -1,5 +1,9 @@
-class Navbar extends React.Component {
-    render() {
+var Navbar = React.createClass({
+    propTypes: {
+        title: React.PropTypes.string.isRequired
+    },
+
+    render: function() {
         return (
             <div className="navbar navbar-inverse navbar-fixed-top" role="navigation">
                 <div className="container">
@@ -11,7 +15,6 @@ class Navbar extends React.Component {
                             <span className="icon-bar"></span>
                         </button>
                         <a className="navbar-brand" href="#">{this.props.title}</a>
-
                     </div>
                     <div className="collapse navbar-collapse">
                         <ul className="nav navbar-nav"></ul>
@@ -20,10 +23,6 @@ class Navbar extends React.Component {
             </div>
         );
     }
-}
-
-Navbar.propTypes = {
-    title: React.PropTypes.string.isRequired
-};
+});
 
 export default Navbar;

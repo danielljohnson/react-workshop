@@ -1,13 +1,13 @@
-var ShoppingListItem = React.createClass({
-    render: function() {
+class ShoppingListItem extends React.Component {
+    render() {
         return (
             <li>{this.props.item.name}</li>
         );
     }
-});
+}
 
-var ShoppingList = React.createClass({
-    render: function() {
+class ShoppingList extends React.Component {
+    render() {
         var items = this.props.items.map(function(item, i) {
             return (
                 <ShoppingListItem item={item} key={i}/>
@@ -22,6 +22,6 @@ var ShoppingList = React.createClass({
             </div>
         );
     }
-});
+}
 
 export default ShoppingList;

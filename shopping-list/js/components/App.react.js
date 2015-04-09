@@ -10,8 +10,8 @@ var items = [{
     name: 'scallops'
 }];
 
-var App = React.createClass({
-    render: function() {
+class App extends React.Component {
+    render() {
         return (
             <section>
                 <Navbar title="React Workshop" />
@@ -22,6 +22,6 @@ var App = React.createClass({
             </section>
         );
     }
-});
+}
 
 export default App;
