@@ -16,15 +16,15 @@
 
 // console.log(name);
 
-var funcs = [];
+// var funcs = [];
 
-for (var i = 0; i < 5; i++) {
-    funcs.push(function() {
-        console.log(i);
-    });
-}
+// for (var i = 0; i < 5; i++) {
+//     funcs.push(function() {
+//         console.log(i);
+//     });
+// }
 
-funcs[3]();
+// funcs[3]();
 
 // var funcs = [];
 
@@ -47,3 +47,23 @@ funcs[3]();
 // }
 
 // funcs[3]();
+
+// var createFamilyFactory = function(lastName) {
+//    var familyName = lastName;
+
+//    return function(firstName) {
+//        var familyMember = {
+//            'name' : firstName + ' ' + lastName
+//        };
+
+//        return familyMember;
+//    };
+// };
+
+// var addThomasMember = createFamilyFactory('Thomas');
+// var me = addThomasMember('David');
+// console.log(me.name);
+
+// var addJohnsonMember = createFamilyFactory('Johnson');
+// var you = addJohnsonMember('Dan');
+// console.log(you.name);
