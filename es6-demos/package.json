@@ -1,0 +1,9 @@
+{
+  "name": "es6-demos",
+  "version": "0.0.1",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-babel": "^4.0.0"
+  },
+  "dependencies": {}
+}
