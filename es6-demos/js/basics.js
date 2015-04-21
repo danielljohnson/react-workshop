@@ -1,9 +1,9 @@
 // default params
-// function fullName(firstName = 'Dan', lastName = 'Johnson') {
-//     return `${firstName} ${lastName}`;
-// }
+function fullName(firstName = 'Dan', lastName = 'Johnson') {
+    return `${firstName} ${lastName}`;
+}
 
-// console.log(fullName('Ella'));
+console.log(fullName('Ella'));
 
 // block scoping
 // var name = 'Dan';
@@ -47,23 +47,3 @@
 // }
 
 // funcs[3]();
-
-// var createFamilyFactory = function(lastName) {
-//    var familyName = lastName;
-
-//    return function(firstName) {
-//        var familyMember = {
-//            'name' : firstName + ' ' + lastName
-//        };
-
-//        return familyMember;
-//    };
-// };
-
-// var addThomasMember = createFamilyFactory('Thomas');
-// var me = addThomasMember('David');
-// console.log(me.name);
-
-// var addJohnsonMember = createFamilyFactory('Johnson');
-// var you = addJohnsonMember('Dan');
-// console.log(you.name);

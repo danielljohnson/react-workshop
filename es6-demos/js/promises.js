@@ -9,25 +9,25 @@ function slow() {
     });
 }
 
-// slow().then(function(val) {
-//     console.log(`resolved: ${val}`);
-// }, function(val) {
-//     console.log(`rejected: ${val}`);
-// });
+slow().then(function(val) {
+    console.log(`resolved: ${val}`);
+}, function(val) {
+    console.log(`rejected: ${val}`);
+});
 
-function slower() {
-    return new Promise(function(resolve, reject) {
-        // do something slow
-        setTimeout(function() {
-            resolve('slower');
-        }, 2000);
-    });
-}
+// function slower() {
+//     return new Promise(function(resolve, reject) {
+//         // do something slow
+//         setTimeout(function() {
+//             resolve('slower');
+//         }, 2000);
+//     });
+// }
 
-Promise.all([slow(), slower()])
-    .then(function(values) {
-        console.log(values);
-    });
+// Promise.all([slow(), slower()])
+//     .then(function(values) {
+//         console.log(values);
+//     });
 
 // Promise.race([slow(), slower()])
 //     .then(function(values) {
